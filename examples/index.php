@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Gist</title>
-</head>
-<body>
-    
-</body>
-</html>
+<?php
+
+use myPHPnotes\Gist;
+
+require_once "../Gist.php";
+
+$gistObject = new Gist();
+
+var_dump($gistObject);

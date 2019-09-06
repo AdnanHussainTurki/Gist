@@ -9,7 +9,7 @@ class Gist
 {
     protected $token;
     protected $username;
-    function __construct(string username, string $token)
+    function __construct(string username = null, string $token = null)
     {
         $this->username = $username;
         $this->token = $token;
