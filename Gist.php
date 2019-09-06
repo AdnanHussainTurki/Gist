@@ -13,5 +13,10 @@ class Gist
     {
         $this->username = $username;
         $this->token = $token;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     }
+    
 }
