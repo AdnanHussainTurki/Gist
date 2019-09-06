@@ -18,5 +18,17 @@ class Gist
     {
         # code...
     }
+    public function view()
+    {
+                
+    }
+    public function delete()
+    {
+                
+    }
+    public function edit()
+    {
+                    
+    }
     
 }
