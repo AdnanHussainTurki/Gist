@@ -1,5 +1,5 @@
 # Gist
-PHP API wrapper for Gist.
+PHP API wrapper for Gist. (Currently under development)
 
 <h3>Manage Gists at your Backend</h3>
 <ul>
