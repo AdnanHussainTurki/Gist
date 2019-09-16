@@ -14,7 +14,7 @@ PHP API wrapper for Gist.
 <p>
     <strong>Just a helper project by Adnan Hussain Turki.</strong><br>
 </p>
-<div style="text-align: center;">
-    <p>Built in <strong>India</strong></p>
+<div >
+    <p  align="center">Built in <strong>India</strong></p>
 </div>    
 <p><strong>Contributors are gratefully welcome.. :).</strong></p>
