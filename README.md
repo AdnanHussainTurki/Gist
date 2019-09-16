@@ -12,7 +12,7 @@ PHP API wrapper for Gist.
 </ul>
 <hr>
 <p>
-    <strong>Just a helper project by Adnan Hussain Turki.</strong>
-    <strong>Built in India.</strong>
+    <strong>Just a helper project by Adnan Hussain Turki.</strong><br>
+    Built in <strong>India</strong>. <br>
     <strong>Contributors are gratefully welcome.. :).</strong>
 </p>
