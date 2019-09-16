@@ -10,5 +10,5 @@ PHP API wrapper for Gist.
     <li>Delete Gist</li>
     <li>View Public Gists</li>
 </ul>
-
+<hr>
 <p><strong>Contributors are gratefully welcome.. :).</strong></p>
