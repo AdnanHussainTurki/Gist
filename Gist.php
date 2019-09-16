@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * @Author: Adnan Hussain Turki
+ * @Website: www.myphpnotes.com
+ * @Email Address: adnanhussainturki@gmail.com
+=====================================
+ * @Creation Time:   2019-09-06 19:47:42
+ * @Last Modified by:   Adnan
+ * @Last Modified time: 2019-09-16 21:05:10
+=====================================
+   PROPERTY OF WWW.MYPHPNOTES.COM
+ */
 namespace myPHPnotes;
 
 /**
@@ -23,29 +34,50 @@ class Gist
     } 
     public function getPublicStarred()
     {
-        return $this->curl($this->host . "/gists");
+        // TO BE BUILT
     }
-    public function myGists()
+
+    public function myGists($page = 1, $perPage = 100)
     {
-        # code...
+        $this->checkAuth();
+        return $this->curl($this->host . "/users/{$this->username}/gists", ["access_token" => $this->token, "page" => $page, 'per_page' => $perPage]);
     }
-    public function view()
+    public function view(string $gist_id)
     {
-                
+        return $this->curl($this->host . "/gists/" . $gist_id, ["access_token" => $this->token]);       
     }
-    public function delete()
+    public function viewPrivate(string $gist_id)
     {
-                
+        $this->checkAuth();
+        return $this->curl($this->host . "/gists/" . $gist_id, ["access_token" => $this->token]);
     }
-    public function edit()
+    public function create(GistObject $gist)
     {
-                    
+        $this->checkAuth();
+        return $this->curl($this->host . "/gists?access_token=" . $this->token, json_encode($gist, JSON_FORCE_OBJECT), "application/json", true);
     }
-    protected function curl($url, $parameters = [], $content_type = "application/json", $post = false)
+    public function delete(string $gist_id)
+    {
+      $this->checkAuth();
+        return $this->curl($this->host . "/gists/{$gist_id}?access_token=" . $this->token, [], "application/json", false, false, true);      
+    }
+    public function edit(string $gist_id, GistObject $gist)
+    {
+       // PRIVACY OF THE GIST CANNOT BE CHANGED BY THIS
+        $this->checkAuth();
+        return $this->curl($this->host . "/gists/{$gist_id}?access_token=" . $this->token, json_encode($gist, JSON_FORCE_OBJECT), "application/json", false, true);
+    }
+    protected function curl($url, $parameters = [], $content_type = "application/json", $post = false, $patch = false, $delete = false)
     {
         $ch = curl_init();
         if ($post) {
             curl_setopt($ch, CURLOPT_POST, $post);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $parameters);
+        } elseif($patch) {
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $parameters);
+        } elseif($delete) {
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'DELETE');
             curl_setopt($ch, CURLOPT_POSTFIELDS, $parameters);
         } else {
             $http_parameters = http_build_query($parameters);
@@ -64,6 +96,12 @@ class Gist
         $headers[] = "user-agent: myPHPnotes PHP wrapper";
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         $result = curl_exec($ch);
+        die($result);
         return $result;
+    }
+    protected function checkAuth() {
+        if (!$this->username or !$this->token) {
+            die("UNAUTHORISED");
+        }
     }
 }
