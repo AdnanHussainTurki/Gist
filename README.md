@@ -11,4 +11,8 @@ PHP API wrapper for Gist.
     <li>View Public Gists</li>
 </ul>
 <hr>
-<p><strong>Contributors are gratefully welcome.. :).</strong></p>
+<p>
+    <strong>Just a helper project by Adnan Hussain Turki.</strong>
+    <strong>Built in India.</strong>
+    <strong>Contributors are gratefully welcome.. :).</strong>
+</p>
