@@ -10,11 +10,11 @@ PHP API wrapper for Gist.
     <li>Delete Gist</li>
     <li>View Public Gists</li>
 </ul>
+<div >
+    <p  align="center">Built in <strong>India</strong></p>
+</div>  
 <hr>
 <p>
     <strong>Just a helper project by Adnan Hussain Turki.</strong><br>
-</p>
-<div >
-    <p  align="center">Built in <strong>India</strong></p>
-</div>    
+</p>  
 <p><strong>Contributors are gratefully welcome.. :).</strong></p>
