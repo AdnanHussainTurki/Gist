@@ -7,7 +7,7 @@
 =====================================
  * @Creation Time:   2019-09-06 19:47:42
  * @Last Modified by:   Adnan
- * @Last Modified time: 2019-09-16 21:05:10
+ * @Last Modified time: 2019-09-18 01:00:48
 =====================================
    PROPERTY OF WWW.MYPHPNOTES.COM
  */
@@ -96,7 +96,6 @@ class Gist
         $headers[] = "user-agent: myPHPnotes PHP wrapper";
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         $result = curl_exec($ch);
-        die($result);
         return $result;
     }
     protected function checkAuth() {
