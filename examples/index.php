@@ -6,8 +6,10 @@ use myPHPnotes\GistObject;
 require_once "../Gist.php";
 require_once "../GistObject.php";
 
-$gistObject = new Gist();
-$authorisedGistObject = new Gist("AdnanHussainTurki", "ddbfd0fb1c955cc3aa7a539cff359ed43d5185ba");
+$gist = new Gist();
+
+
+$authorisedGist = new Gist("AdnanHussainTurki", "ddbfd0fb1c955cc3aa7a539cff359ed43d5185ba");
 
 $GistObject = new GistObject("TEST", true);
 $GistObject->addContent("test.txt", "This is a dfdasf test");
