@@ -48,7 +48,7 @@ $GistObject->addContent("test.txt", "This is a edited dfdasf test");
 $GistObject->addContent("test2.txt", "This is a edited dasfdasf test");
 $GistObject->addContent("test.txt", "This is a edited adsfewwe test");
 $authorisedGist->edit( "<--ID_OF_GIST_TO_BE_EDITED-->", $GistObject); // ID of the Gist will be returned in JSON
-<!-- Gist Edit -->
+<!-- Gist Edited -->
 
 <!-- Deleting Gist -->
 $authorisedGistObject->delete("ID_OF_THE_GIST");
