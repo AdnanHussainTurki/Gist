@@ -3,13 +3,14 @@ PHP API wrapper for Gist.
 
 <h3>Manage Gists at your Backend</h3>
 <ul>
-    <li>List all your Gists</li>
-    <li>Create Gist</li>
-    <li>View Gist</li>
-    <li>Edit Gist</li>
-    <li>Delete Gist</li>
-    <li>View Public Gists</li>
+    <li>List all your Gists ()</li>
+    <li>Create Gist ()</li>
+    <li>View Gist ()</li>
+    <li>Edit Gist< ()/li>
+    <li>Delete Gist ()</li>
+    <li>View Public Gists (Can be viewed using unauthenticated Gist)</li>
 </ul>
+<hr>
 
 ```
 <?php
@@ -25,16 +26,45 @@ $gist = new Gist();
 
 $authorisedGist = new Gist("AdnanHussainTurki", "ddbfd0fb1c955cc3aa7a539cff359ed43d5185ba");
 
+
+<!-- List All Public Gists -->
+$page = 1;
+$perPage = 100;
+$gist->getPublicGists($page, $perPage);
+<!-- All Public Gists Pulled as JSON -->
+
+
+<!-- Creating Gist -->
 $GistObject = new GistObject("TEST", true);
 $GistObject->addContent("test.txt", "This is a dfdasf test");
 $GistObject->addContent("test2.txt", "This is a dasfdasf test");
 $GistObject->addContent("test.txt", "This is a adsfewwe test");
-$authorisedGistObject->delete("4300707c03acbf96d570b2a70c871eb7");
+$authorisedGist->create($GistObject); // ID of the Gist will be returned in JSON
+<!-- Gist Created -->
+
+<!-- Editing Gist -->
+$GistObject = new GistObject("TEST", true);
+$GistObject->addContent("test.txt", "This is a edited dfdasf test");
+$GistObject->addContent("test2.txt", "This is a edited dasfdasf test");
+$GistObject->addContent("test.txt", "This is a edited adsfewwe test");
+$authorisedGist->edit( "<--ID_OF_GIST_TO_BE_EDITED-->", $GistObject); // ID of the Gist will be returned in JSON
+<!-- Gist Edit -->
+
+<!-- Deleting Gist -->
+$authorisedGistObject->delete("ID_OF_THE_GIST");
+<!-- Gist Deleted -->
+
+<!-- My Gists -->
+$page = 1;
+$perPage = 100;
+$gist->myGists($page, $perPage); 
+<!-- My Gist Pulled as JSON -->
+
 
 ?>
 ```
 
-
+<hr>
 <div >
     <p  align="center">Built in <strong>India</strong></p>
 </div>  
