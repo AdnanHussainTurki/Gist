@@ -1,0 +1,22 @@
+{
+    "name": "adnanhussainturki/gist",
+    "description": "A simple, lightweight library to access Github's Gist API in PHP",
+    "type": "library",
+    "keywords": ["api", "http", "rest", "Github", "Gist"],
+    "homepage": "https://www.myphpnotes.com",
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AdnanHussainTurki\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adnan Hussain Turki",
+            "email": "adnanhussainturki@gmail.com"
+        }
+    ]
+}

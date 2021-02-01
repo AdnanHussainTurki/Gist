@@ -1,10 +1,11 @@
 <?php
 
+require_once "../src/Gist.php";
+require_once "../src/GistObject.php";
+
 use myPHPnotes\Gist;
 use myPHPnotes\GistObject;
 
-require_once "../Gist.php";
-require_once "../GistObject.php";
 
 $unauthenticatedgist = new Gist();
 
