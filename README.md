@@ -1,4 +1,6 @@
+![Artboard 1](https://github.com/AdnanHussainTurki/Gist/assets/24974673/31b8a109-9028-4047-bc9e-89397f37c4fc)
 # Gist
+
 PHP API wrapper for Gist.
 
 ### Installation
